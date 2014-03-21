@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+	#ampel(style="width:100%; height:200px; background-color:purple;")
+
+	script(src="/javascripts/socket.io.js")
+	script
+		var socket = io.connect('http://localhost:3000');
+		socket.on('build', function (data) {
+			console.log("build result: " + data.result);
+			var ampel = document.getElementById("ampel");
+			ampel.style.background=(data.result === "SUCCESS") ? "green": "red";
+		});
