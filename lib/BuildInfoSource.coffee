@@ -30,7 +30,7 @@ class ExpressPushCiBuildInfoSource extends CiBuildInfoSource
 class HttpPullCiBuildInfoSource extends CiBuildInfoSource
 	constructor: (job) ->
 		super(job)
-		@connectionString = "http://ekis:ekis4mgm@corevm01:8080/job/#{@job}/lastBuild/api/json"
+		@connectionString = "http://ekis:secret_pw@corevm01:8080/job/#{@job}/lastBuild/api/json"
 		@delay = 10000
 		@_timerId = null
 
