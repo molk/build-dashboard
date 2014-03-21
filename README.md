@@ -15,7 +15,7 @@ Dependencies
 
 Install
 -------
-* `git clone git@mgmhhrndvm01:build-dashboard`
+* `git clone git@github.com:molk/build-dashboard.git`
 * `cd build-dashboard`
 * `npm install`
 
